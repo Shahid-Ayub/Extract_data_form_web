@@ -11,11 +11,11 @@ paragraphs = soup.find_all('p')
 
 word = input("Enter the word you want to find: ").lower()
 
-if len(paragraphs) >= 4:
-    text = paragraphs[3].get_text().lower()
+if len(paragraphs) >= 2: 
+    text = paragraphs[3].get_text().lower()  # look for 3rd paragraph
     if word in text:
         print("Found the word!")
-        print("Paragraph:", paragraphs[3].get_text())
+        print("Paragraph:", paragraphs[3].get_text())  
     else:
         print("Word not found in the 4th paragraph.")
 else:
